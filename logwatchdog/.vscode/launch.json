@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Main Class",
+            "request": "launch",
+            "mainClass": "com.jrcribb.watchdog.Main",
+            "projectName": "logwatchdog"
+        }
+    ]
+}

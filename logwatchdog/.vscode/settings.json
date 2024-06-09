@@ -1,0 +1,5 @@
+{
+    "java.jdt.ls.java.home": "d:/software/JDK",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.errors.incompleteClasspath.severity": "ignore"
+}

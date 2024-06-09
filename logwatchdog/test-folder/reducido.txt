@@ -1,0 +1,99 @@
+2023-11-27 07:10:05.1146 SziCom.Degas.Jobs.DegasQuartzJob An error occurred while updating the entries. See the inner exception for details.System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Devart.Data.Oracle.OracleException: ORA-20001: El dia operativo 25/11/2023 esta bloqueado para la edicion de transporte de terceros.
+2023-11-27 07:10:05.1146 SziCom.Degas.Jobs.DegasQuartzJob An error occurred while updating the entries. See the inner exception for details.System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Devart.Data.Oracle.OracleException: ORA-20001: El dia operativo 25/11/2023 esta bloqueado para la edicion de transporte de terceros.
+ORA-06512: at "CI.BP_TRANSPORTE", line 25
+ORA-04088: error during execution of trigger 'CI.BP_TRANSPORTE'
+   at Devart.Data.Oracle.a1.c(Int32 A_0)
+   at Devart.Data.Oracle.cs.a(Int32 A_0, cc A_1)
+   at Devart.Data.Oracle.OracleCommand.InternalExecute(CommandBehavior behavior, IDisposable disposable, Int32 startRecord, Int32 maxRecords, Boolean nonQuery)
+   at Devart.Common.DbCommandBase.ExecuteDbDataReader(CommandBehavior behavior, Boolean nonQuery)
+   at Devart.Data.Oracle.OracleCommand.ExecuteNonQuery()
+   at Devart.Data.Oracle.Entity.h.l()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__39.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__39.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__156`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__154.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__151.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Entity.Oracle.OracleDegasData.<SaveChangesAsync>d__918.MoveNext() in C:\Program Files (x86)\Jenkins\workspace\Compilacion Quartz\entity\src\SziCom.Degas.Entity.Oracle\OracleDegasData.cs:line 130
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Data.LIT.TGN.EntityPrePosProcesoAbi2LIT.<RealizarAccionesPostAutorizacionCompensacion>d__13.MoveNext() in C:\Program Files (x86)\Jenkins\workspace\Compilacion Quartz\ncore\src\SziCom.Degas.Data.LIT\TGN\EntityPrePosProcesoAbi2LIT.cs:line 105
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Data.TGN.EntityPrePosProcesoAbi2.<PostProcesoAutorizacionCompensacion>d__35.MoveNext() in C:\Program Files (x86)\Jenkins\workspace\Compilacion Quartz\ncore\src\szicom.degas.data\TGN\EntityPrePosProcesoAbi2.cs:line 175
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Core.Abi2.DownstreamAutorizacionDegAbi2.<PostProceso>d__4.MoveNext() in C:\Program Files (x86)\Jenkins\workspace\Compilacion Quartz\ncore\src\SziCom.Degas.Core.Abi2\DownstreamAutorizacionDegAbi2.cs:line 49
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Core.Abi2.BaseDegasAbi2`1.<Procesar>d__88.MoveNext() in C:\Program Files (x86)\Jenkins\workspace\Compilacion Quartz\ncore\src\SziCom.Degas.Core.Abi2\BaseDegasAbi2.cs:line 130
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Jobs.Abi2.BaseDescargaAbi2Job`1.<<ExecuteJob>b__17_0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Jobs.Abi2.BaseDescargaAbi2Job`1.<ExecuteJob>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at SziCom.Degas.Jobs.DegasQuartzJob.<Execute>d__12.MoveNext()
+2023-11-27 07:10:05.1458 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:07.9899 SziCom.Componentes.Common.Logging.Logger Ejecutando el Job Abi2Transferencias no se obtuvieron datos desde ABI
+2023-11-27 07:10:07.9899 SziCom.Componentes.Common.Logging.Logger El Job Abi2Transferencias ha finalizado su ejecución
+2023-11-27 07:10:07.9899 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:08.4118 SziCom.Componentes.Common.Logging.Logger El Job Abi2ScadaDiario ha finalizado su ejecución
+2023-11-27 07:10:08.4118 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:10.5213 SziCom.Componentes.Common.Logging.Logger El Job Abi2EstadoSistemaLinepack ha finalizado su ejecución
+2023-11-27 07:10:10.5213 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:18.7721 SziCom.Componentes.Common.Logging.Logger El Job Abi2BalanceDownstreamDiario ha finalizado su ejecución
+2023-11-27 07:10:18.7721 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:21.2879 SziCom.Componentes.Common.Logging.Logger El Job Abi2BalanceGasDiario ha finalizado su ejecución
+2023-11-27 07:10:21.6005 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:21.3348 SziCom.Componentes.Common.Logging.Logger El Job Abi2AutorizacionGas ha finalizado su ejecución
+2023-11-27 07:10:21.6161 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:22.3505 SziCom.Componentes.Common.Logging.Logger El Job Abi2ScadaHorario ha finalizado su ejecución
+2023-11-27 07:10:22.3505 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-27 07:10:29.4762 SziCom.Componentes.Common.Logging.Logger El Job Abi2AutorizacionGasTte ha finalizado su ejecución
+2023-11-30 19:50:00.7245 Quartz.Core.QuartzSchedulerThread Batch acquisition of 0 triggers
+2023-11-30 19:50:28.5960 Quartz.Core.QuartzSchedulerThread Batch acquisition of 0 triggers
+2023-11-30 19:50:52.0623 Quartz.Core.QuartzSchedulerThread Batch acquisition of 1 triggers
+2023-11-30 19:51:00.0140 Quartz.Core.QuartzSchedulerThread Batch acquisition of 0 triggers
+2023-11-30 19:51:00.0140 Quartz.Core.JobRunShell Calling Execute on job SCADA.ScadaHorarioJobLit
+2023-11-30 19:51:00.0140 SziCom.Componentes.Common.Logging.Logger SCADA Horario: inicia el proceso
+2023-11-30 19:51:00.0765 SziCom.Componentes.Common.Logging.Logger SCADA Horario: Proceso del archivo: Degas3_20231130194812.csv
+2023-11-30 19:51:00.3265 SziCom.Componentes.Common.Logging.Logger SCADA Horario: finalizó el proceso
+2023-11-30 21:18:00.0052 Quartz.Core.QuartzSchedulerThread Batch acquisition of 0 triggers
+2023-11-30 21:18:00.0052 Quartz.Core.JobRunShell Calling Execute on job SCADA.ScadaHorarioJobLit
+2023-11-30 21:18:00.0052 SziCom.Componentes.Common.Logging.Logger SCADA Horario: inicia el proceso
+2023-11-30 21:18:00.0052 SziCom.Componentes.Common.Logging.Logger SCADA Horario: inicia el proceso
+2023-11-30 21:18:00.0052 SziCom.Componentes.Common.Logging.Logger SCADA Horario: inicia el proceso
+2023-11-30 21:18:00.0052 SziCom.Componentes.Common.Logging.Logger SCADA Horario: finalizó el proceso
+2023-11-30 21:18:00.0052 Quartz.Core.JobRunShell Trigger instruction : NoInstruction
+2023-11-30 21:18:23.5956 Quartz.Core.QuartzSchedulerThread Batch acquisition of 0 triggers
