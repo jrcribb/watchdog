@@ -8,7 +8,7 @@
     "ignorarDesconocidos": true,
     "mostrarNormales": false,
     "mostrarErrores": true,
-    "mostrarAvisos": true,
+    "mostrarAvisos": false,
     "patronesNormales": [
         "Quartz.Core.QuartzSchedulerThread Batch acquisition of ",
         "Quartz.Core.JobRunShell Calling Execute on job (.+?)",
